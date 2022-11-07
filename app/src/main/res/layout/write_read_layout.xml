@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="#ffffff"
+    android:layout_marginTop="100dp"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/write"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="写入数据"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/write_clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:text="清除"
+        app:layout_constraintLeft_toRightOf="@id/write"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/write_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:minLines="4"
+        android:maxLines="4"
+        android:gravity="left"
+        android:textCursorDrawable="@drawable/edit_custom_style"
+        android:selectAllOnFocus="true"
+        android:background="@drawable/deit_text_background"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/write" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.4" />
+
+    <Button
+        android:id="@+id/read"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="读取数据"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guideline5" />
+
+    <Button
+        android:id="@+id/read_clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:text="清除"
+        app:layout_constraintLeft_toRightOf="@id/read"
+        app:layout_constraintTop_toTopOf="@id/guideline5" />
+
+    <TextView
+        android:id="@+id/read_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:minLines="6"
+        android:maxLines="6"
+        android:background="@drawable/deit_text_background"
+        android:layout_marginRight="20dp"
+        android:text="    尊敬的用户，感谢您选择拓攻无人机，以下为拓攻农业无人机机身损失保障条款，该条款用于说明机身损失保障计划的保障范围及相关注意事项，敬请仔细阅读，并知晓条款具体内容。
+\n1、机身损失保障计划有效保障期限为激活之日起 12 个月。
+\n2、机身损失保障计划适用于在有效保障期限内，正常使用拓攻农业无人机从事农业植保作业，由于非主观故意操作失误或非主观故意意外事故导致的农业无人机机坠落或碰撞造成机身损失。
+\n3、机身损失保障计划包括普通件额度、易损件额度、工时费额度，普通件额度用于拓攻农业无人机（不含电池、遥控器、打点器、充电器等附属设备）的机身维修，易损件额度用于拓攻无人机易损件的维修，工时费用于维修工时费的扣除。
+4、维修费用超出机身损失保障计划额度的部分由客户承担。
+5、易损件清单会根据实际情况进行调整，具体调整情况将不再另行通知，以拓攻售后系统为准，请用户及时注意拓攻服务政策条款变更。
+6、不在机身损失保障计划范围内的情形 ：
+您的农业无人机所绑定的机身保障期限已满；
+您的农业无人机绑定的机身保障额度已用尽；
+使用农业无人机从事非农业植保作业活动造成的任何损失；
+任何人为故意造成的损坏或损失；
+无法提供或拒绝提供相应事故的飞行数据；
+您在农业无人机过程中造成的您或其他人的人身损害或财产损失；
+机身或配套设备失踪的，失踪部分不予保障；
+农业无人机被偷、被盗、被抢、遗忘、失踪或被丢弃；
+在不适航情形或非正常工作环境下飞行造成的损坏；
+因自然灾害、战争、军事行动、暴动、恐怖活动等不可抗力所致的直接、间接损失；
+自行改装造成的机身故障；
+使用非拓攻官方的第三方零配件（包含电池、充电器等附属设备）导致的损坏；"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/read" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

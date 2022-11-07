@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <Button
+        android:id="@+id/bluetooth_scan_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="搜索蓝牙"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.6" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/bluetooth_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline3"
+        app:layout_constraintBottom_toBottomOf="@id/guideline4"/>
+
+    <LinearLayout
+        android:id="@+id/linear_layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline4">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:text="已连接到："
+            android:textSize="16dp"
+            android:textColor="#000000"/>
+        <TextView
+            android:id="@+id/bluetooth_connect_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="LQZ的蓝牙设备"
+            android:layout_marginTop="30dp"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/write_and_read"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="读写数据"
+        app:layout_constraintTop_toBottomOf="@id/linear_layout1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <Button
+        android:id="@+id/disconnect_bluetooth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="断开连接"
+        app:layout_constraintTop_toBottomOf="@id/write_and_read"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
